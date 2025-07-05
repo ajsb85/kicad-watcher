@@ -1,0 +1,13 @@
+[Unit]
+Description=KiCad Schematic Watcher
+After=network.target
+
+[Service]
+Type=simple
+User=ajsb85
+ExecStart=/usr/local/bin/kicad-watcher /path/to/your/kicad/projects
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
